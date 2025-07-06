@@ -36,3 +36,14 @@ tests/ragger/test_eip7702.py::test_eip7702_in_whitelist[flex]                   
 tests/ragger/test_eip7702.py::test_eip7702_in_whitelist_all_chain_whitelisted[flex]  PASSED  [ 11%]
 tests/ragger/test_eip7702.py::test_eip7702_in_whitelist_all_chain_param[flex]        FAILED  [ 11%]
 tests/ragger/test_eip7702.py::test_eip7702_in_whitelist_max[flex]                    FAILED  [ 12%]
+```
+
+---
+
+## 🔒 Registry Constraints
+
+### 🚧 Current Limitation
+
+- The registry is **signed** — any unauthorized local modification will be rejected.
+- This signature mechanism means we **cannot modify or test registry settings locally**.
+- We must rely on **official, signed updates** for any registry-related changes.
