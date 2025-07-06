@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LedgerFlow - ETHGlobal Hackathon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ledger-blue': '#0066ff',
+                        'ledger-dark': '#1a1a1a',
+                        'ledger-gray': '#f8f9fa'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-ledger-blue rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cube text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold text-ledger-dark">LedgerFlow</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-gray-600 hover:text-ledger-blue transition-colors">Overview</a>
+                    <a href="#tracks" class="text-gray-600 hover:text-ledger-blue transition-colors">Tracks</a>
+                    <a href="#contributions" class="text-gray-600 hover:text-ledger-blue transition-colors">Contributions</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-ledger-gray to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-ledger-blue/10 rounded-full text-ledger-blue text-sm font-medium mb-6">
+                    <i class="fas fa-trophy mr-2"></i>
+                    ETHGlobal Hackathon Submission
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-ledger-dark mb-6">
+                    Ledger<span class="text-ledger-blue">Flow</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    Improving the developer and user experience when building with Ledger hardware wallets through clear signing, hardware integration, and documentation improvements.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#tracks" class="inline-flex items-center px-6 py-3 bg-ledger-blue text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Explore Our Work
+                    </a>
+                    <a href="https://github.com/LedgerHQ/app-ethereum/pull/835" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-ledger-dark mb-4">Project Overview</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    LedgerFlow addresses key challenges in the Ledger ecosystem across three strategic tracks
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
+                    <div class="w-16 h-16 bg-ledger-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-signature text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-ledger-dark mb-2">Clear Signing</h3>
+                    <p class="text-gray-600">ERC-7730 registry improvements with ERC-1155 support</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microchip text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-ledger-dark mb-2">Hardware Integration</h3>
+                    <p class="text-gray-600">Multi-chain explorer support for Ledger Stax and Flex</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-100">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-ledger-dark mb-2">Documentation</h3>
+                    <p class="text-gray-600">Developer experience improvements and issue identification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section id="tracks" class="py-16 bg-ledger-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-ledger-dark mb-4">Our Contributions</h2>
+                <p class="text-lg text-gray-600">Detailed breakdown of our work across three key areas</p>
+            </div>
+
+            <!-- Track 1: Clear Signing -->
+            <div class="mb-12 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-ledger-blue rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-signature text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ledger-dark">Track 1 – Clear Signing (ERC-7730)</h3>
+                            <p class="text-gray-600">ERC-1155 Call Data Support to Registry</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-ledger-dark mb-3">Key Features</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+                                    Added ERC-1155 call-data structures for standard functions
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+                                    Extended import functionality for ERC-1155 implementations
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+                                    Implemented validation layer for imported call data
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+                                    Introduced new registration methods for contract variants
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-ledger-dark mb-3">Benefits</h4>
+                            <div class="space-y-3">
+                                <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+                                    <p class="text-green-800 font-medium">Standardized Integration</p>
+                                    <p class="text-green-600 text-sm">Provides unified support for all ERC-1155 implementations</p>
+                                </div>
+                                <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                                    <p class="text-blue-800 font-medium">Backward Compatible</p>
+                                    <p class="text-blue-600 text-sm">No breaking changes to existing functionality</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <a href="https://github.com/LedgerHQ/clear-signing-erc7730-registry/pull/1360" target="_blank" class="inline-flex items-center text-ledger-blue hover:text-blue-700 font-medium">
+                            <i class="fab fa-github mr-2"></i>
+                            View Pull Request #1360
+                            <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track 2: Hardware Integration -->
+            <div class="mb-12 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-microchip text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ledger-dark">Track 2 – Hardware Integration</h3>
+                            <p class="text-gray-600">Multi-Chain Explorer Support for Ledger Stax and Flex</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-ledger-dark mb-3">Improvements Made</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-globe text-blue-500 mt-1 mr-3 text-sm"></i>
+                                    Multi-Chain Explorer Support for Arbitrum, Base, Optimism
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-link text-blue-500 mt-1 mr-3 text-sm"></i>
+                                    Dynamic Explorer Links with chain ID mapping
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-qrcode text-blue-500 mt-1 mr-3 text-sm"></i>
+                                    Updated UI messaging for generic explorer scanning
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-ledger-dark mb-3">User Experience</h4>
+                            <div class="p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
+                                <p class="text-gray-800 font-medium mb-2">Enhanced Transaction Verification</p>
+                                <p class="text-gray-600 text-sm">
+                                    QR codes now redirect to the correct network-specific explorer, 
+                                    allowing seamless transaction verification across different chains.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <a href="https://github.com/LedgerHQ/app-ethereum/pull/835" target="_blank" class="inline-flex items-center text-ledger-blue hover:text-blue-700 font-medium">
+                            <i class="fab fa-github mr-2"></i>
+                            View Pull Request #835
+                            <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track 3: Documentation -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-book text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-ledger-dark">Track 3 – Documentation Improvement</h3>
+                            <p class="text-gray-600">Developer Experience Feedback and Issue Identification</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="p-4 bg-red-50 rounded-lg border border-red-200">
+                            <h4 class="font-semibold text-red-800 mb-2">
+                                <i class="fas fa-image mr-2"></i>
+                                Logo Inconsistency
+                            </h4>
+                            <p class="text-red-600 text-sm">
+                                Songbird network displays inconsistent logos across different device types and icon sizes.
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                            <h4 class="font-semibold text-yellow-800 mb-2">
+                                <i class="fas fa-flask mr-2"></i>
+                                Testing Issues
+                            </h4>
+                            <p class="text-yellow-600 text-sm">
+                                Identified limitations in ragger testing framework including screen advancement speed and navigation testing.
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-orange-50 rounded-lg border border-orange-200">
+                            <h4 class="font-semibold text-orange-800 mb-2">
+                                <i class="fas fa-lock mr-2"></i>
+                                Registry Constraints
+                            </h4>
+                            <p class="text-orange-600 text-sm">
+                                Documented signed registry limitations that prevent local modifications and testing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="contributions" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-ledger-dark mb-4">Project Impact</h2>
+                <p class="text-lg text-gray-600">Our contributions enhance the Ledger ecosystem for developers and users</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl border border-blue-200">
+                    <h3 class="text-xl font-bold text-ledger-dark mb-4">For Developers</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-code text-blue-600 mt-1 mr-3"></i>
+                            Standardized ERC-1155 integration patterns
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-tools text-blue-600 mt-1 mr-3"></i>
+                            Improved testing and debugging capabilities
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book-open text-blue-600 mt-1 mr-3"></i>
+                            Better documentation and issue visibility
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl border border-green-200">
+                    <h3 class="text-xl font-bold text-ledger-dark mb-4">For Users</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-green-600 mt-1 mr-3"></i>
+                            Enhanced transaction transparency
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe text-green-600 mt-1 mr-3"></i>
+                            Seamless multi-chain experience
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-eye text-green-600 mt-1 mr-3"></i>
+                            Consistent visual identity across devices
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ledger-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-ledger-blue rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cube text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold">LedgerFlow</span>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    Built with ❤️ for ETHGlobal Hackathon
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/LedgerHQ/app-ethereum/pull/835" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://github.com/LedgerHQ/clear-signing-erc7730-registry/pull/1360" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-code-branch text-xl"></i>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-sm text-gray-500">
+                    <p>&copy; 2025 LedgerFlow Team. Licensed under MIT License.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   "description": "LedgerFlow - ETHGlobal Hackathon Submission",
   "main": "index.html",
   "scripts": {
-    "build": "echo 'Build completed - static files ready for deployment'",
+    "build": "mkdir -p dist && cp -r *.html *.js *.css LICENSE README.md DocumentationImprovement dist/ 2>/dev/null || cp *.html *.js LICENSE README.md dist/",
     "dev": "python3 -m http.server 3000",
     "start": "python3 -m http.server 3000"
   },
