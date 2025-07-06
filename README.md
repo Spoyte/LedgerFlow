@@ -21,6 +21,8 @@ These improvements enhance the **user experience** by ensuring the QR code redir
 
 ## 📄 Track 3 – Documentation Improvement
 
+👉 **[See detailed documentation improvements here](DocumentationImprovement/README.md)**
+
 ### 📝 Developer Experience Feedback
 
 
