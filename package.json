@@ -1,0 +1,21 @@
+{
+  "name": "ledgerflow",
+  "version": "1.0.0",
+  "description": "LedgerFlow - ETHGlobal Hackathon Submission",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completed - static files ready for deployment'",
+    "dev": "python3 -m http.server 3000",
+    "start": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "ledger",
+    "ethereum",
+    "hackathon",
+    "ethglobal"
+  ],
+  "author": "LedgerFlow Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
