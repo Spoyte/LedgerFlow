@@ -4,6 +4,29 @@ LedgerFlow is our ETHGlobal hackathon submission designed to improve the develop
 
 ---
 
+## 🔐 Track 1 – Clear Signing (ERC-7730)
+
+### ✅ Add ERC-1155 Call Data Support to Registry ([#1360](https://github.com/LedgerHQ/clear-signing-erc7730-registry/pull/1360))
+
+#### 🔍 Overview
+Built during the **ETHGlobal Cannes** hackathon, this contribution introduces **ERC-1155 call-data support** to Ledger's registry system, enabling seamless integration of diverse ERC-1155 implementations through importation.
+
+#### 🔄 Summary of Changes
+- **Added ERC-1155 call-data structures** for standard functions such as `safeTransferFrom`, `safeBatchTransferFrom`, and `setApprovalForAll`.
+- **Extended import functionality** to recognize and support ERC-1155-specific implementations.
+- **Implemented a validation layer** for imported ERC-1155 call data.
+- **Introduced new registration methods** for ERC-1155 contract variants.
+
+#### 🌟 Benefits
+- Provides standardized integration for all ERC-1155 implementations.
+- Supports both standard and custom ERC-1155 variants.
+- Maintains full backward compatibility with existing functionality.
+
+#### ⚠️ Breaking Changes
+None – this is a purely additive feature.
+
+---
+
 ## 🔧 Track 2 – Hardware Integration
 
 ### ✅ Contribution to Ledger's app-ethereum (Ledger Stax and Flex)
